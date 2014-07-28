@@ -1,0 +1,21 @@
+{
+  "name": "mfe-www",
+  "version": "0.1.0",
+  "authors": [
+    "SY.Tang"
+  ],
+  "description": "Baidu Music FE Website",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "lodash": "~2.4.1"
+  }
+}

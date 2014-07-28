@@ -1,0 +1,136 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Music FE - 百度音乐前端团队</title>
+    <link rel="stylesheet" href="css/font.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/page-transition.css"/>
+</head>
+<body>
+<header>
+    <h1 class="logo"><span>Music FE</span></h1>
+    <nav>
+        <ul>
+            <li class="on">Open Source</li>
+            <li>Our Lab</li>
+            <li>About Us</li>
+            <li>Join Us</li>
+        </ul>
+    </nav>
+</header>
+
+<div id="pt-main" class="pt-perspective">
+    <section id="open" class="pt-page">
+        <h3 class="animated" data-animation="zoomIn">Mu Player</h3>
+        <div class="feature feature-core animated" data-animation="fadeInRight">
+            { 
+            <span class="html5-core">html5</span>
+            <span class="plus">+</span>
+            <span class="flash-core">flash</span>
+            双核
+            }
+        </div>
+        <div class="feature feature-api animated" data-animation="fadeInLeft">
+            { 简洁易用的API }
+        </div>
+        <div class="feature feature-stability animated" data-animation="fadeInLeft">
+            { 应用于多个产品 稳定可靠 }
+        </div>
+        <p class="animated" data-animation="fadeIn">『百度音乐播放内核』- 跨平台、轻量级的Web端音频播放解决方案</p>
+        <div class="btn-group animated" data-animation="fadeIn">
+            <span class="btn btn-github">
+                <i></i>
+                View On Github
+            </span>
+            <span class="btn btn-start">
+                <i></i>
+                Quick Start
+            </span>
+        </div>
+    </section>
+    
+    <section id="lab" class="pt-page">
+        <h2 class="animated" data-animation="zoomIn">Write the code and <strong>Rock</strong> the world</h2>
+        <ul class="showcase">
+            <li>
+                <a target="_blank" href="http://labs.music.baidu.com/demo/interactions/visualization/">
+                    <div class="thumb" style="background-image: url(img/labs/music_is_life.jpg)"></div>
+                    <div class="info">
+                        <p class="title">律动的音符</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://labs.music.baidu.com/flee/">
+                    <div class="thumb" style="background-image: url(img/labs/flee.jpg)"></div>
+                    <div class="info">
+                        <p class="title">逃逸游戏</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=2">
+                    <div class="thumb" style="background-image: url(img/labs/ktv.jpg)"></div>
+                    <div class="info">
+                        <p class="title">在线K歌</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=1">
+                    <div class="thumb" style="background-image: url(img/labs/music_eq.jpg)"></div>
+                    <div class="info">
+                        <p class="title">音效增强</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=4">
+                    <div class="thumb" style="background-image: url(img/labs/web_piano.jpg)"></div>
+                    <div class="info">
+                        <p class="title">Web钢琴</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="http://labs.music.baidu.com/demo/audiolab/?p=6">
+                    <div class="thumb" style="background-image: url(img/labs/ring_maker.png)">
+                    </div>
+                    <div class="info">
+                        <p class="title">铃声裁剪</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="about" class="pt-page">
+        <h2 class="animated" data-animation="zoomIn"><strong>我们</strong>是百度音乐前端团队</h2>
+        <ul class="members">
+            <% _.each(members, function(m) { %>
+                <li class="animated" data-animation="flipInY">
+                    <img class="clip" src="img/avatar/<%- m.avatar || 'default.png' %>" alt="" />
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+    
+    <section id="join" class="pt-page">
+        <h2 class="animated" data-animation="zoomIn">与 <code>&lt;Music-FE&gt;</code> 一起<strong>成长</strong></h2>
+    </section>
+</div>
+
+<footer>
+    <ul class="social">
+        <li class="weibo"></li>
+        <li class="github"></li>
+    </ul>
+    <p class="copyright">&copy;2014 Music FE</p>
+</footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="js/ys-sphere.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
