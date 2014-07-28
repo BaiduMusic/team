@@ -1,11 +1,13 @@
+# { The Great MFE Website }
+
 ## How to rock?
 
 ```sh
 $ npm install nobone -g
-$ bow install
+$ bower install
 $ nobone app.coffee
 ```
 
 ----
 
-Any more question, please ask @shuyuan. Have fun.
+Any more question, please ask @shuyuan.
