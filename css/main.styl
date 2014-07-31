@@ -5,580 +5,616 @@ random(a,b)
 sqrt(x)
   return math(x, 'sqrt')
 
-
 body, ul, ol, p
-	margin 0
-	padding 0
+    margin 0
+    padding 0
 
 ul, ol
-	list-style none
+    list-style none
 
 h1, h2, h3, h4, h5
-	font-weight normal
-	margin 0
+    font-weight normal
+    margin 0
 
 a
-	color white
-	text-decoration none
+    color white
+    text-decoration none
 
 body
-	padding-left 200px
-	font-family n, 'Hiragino Sans GB', Helvetica, Arial, 'Microsoft YaHei', sans-serif
+    overflow-x hidden
+    padding-left 200px
+    font-family n, 'Hiragino Sans GB', Helvetica, Arial, 'Microsoft YaHei', sans-serif
+    -webkit-font-smoothing antialiased
 
+/* animated hamburger icon */
+.nav-toggle 
+    cursor pointer 
+    padding 10px 35px 16px 0px
+    position absolute
+    top 10px 
+    left 10px
+    z-index 1000
+    display none
 
-canvas
-	pointer-events none
-	z-index 1 !important
+    span, span:before, span:after
+        cursor pointer
+        border-radius 3px
+        height 4px
+        width 30px
+        background white
+        position absolute
+        display block
+        content ''
+        transition all 500ms ease-in-out
+
+    span:before
+        top -10px 
+
+    span:after
+        bottom -10px
+
+    &.active
+        span
+            background-color transparent
+
+        span:before, span:after
+            top 0
+
+        span:before
+            -webkit-transform rotate(45deg)
+            transform rotate(45deg)
+
+        span:after
+            -webkit-transform rotate(-45deg)
+            transform rotate(-45deg)
 
 header
-	position fixed
-	width 200px
-	height 100%
-	background white
-	top 0
-	left 0
-	text-align center
-	z-index 10
+    position fixed
+    width 200px
+    height 100%
+    background white
+    top 0
+    left 0
+    text-align center
+    z-index 10
 
-	h1
-		padding-top 120px
-		margin: 0 0 20px
-		background url(../img/ui/mfe-logo.png) center 0 no-repeat
-		background-size 140px
-		font-weight: normal
-		font-size 40px
-		// text-shadow 0.05em 0.05em 0.1em #6c6375
-		// color #343C47
-		span 
-			// color: #f35626;
-			color #343C47
-			background-image: -webkit-linear-gradient(60deg, #1E409D , #22c3aa);
-			-webkit-background-clip: text;
-			background-clip: text;
-			-webkit-text-fill-color: transparent;
-			text-fill-color: transparent;
-			-webkit-animation: hue 30s infinite linear;
-			animation: hue 30s infinite linear;
-			font-family l, 'Hiragino Sans GB', Helvetica, Arial, 'Microsoft YaHei', sans-serif
+    h1
+        padding-top 120px
+        margin 0 0 20px
+        background url(../img/ui/mfe-logo.png) center 0 no-repeat
+        background-size 140px
+        font-weight normal
+        font-size 40px
+        // text-shadow 0.05em 0.05em 0.1em #6c6375
+        // color #343C47
+        span 
+            // color #f35626 
+            color #343C47
+            background-image -webkit-linear-gradient(60deg, #1E409D , #22c3aa) 
+            -webkit-background-clip text 
+            background-clip text 
+            -webkit-text-fill-color transparent 
+            text-fill-color transparent 
+            -webkit-animation hue 30s infinite linear 
+            animation hue 30s infinite linear 
+            font-family l, 'Hiragino Sans GB', Helvetica, Arial, 'Microsoft YaHei', sans-serif
 
-	nav
-		li
-			padding: 74px 0 10px
-			text-align center
-			font-size 20px
-			color white
-			cursor pointer
-			-webkit-user-select none
-			background url(../img/ui/hexagon_icon_github2.png) #DB6968 center 10px no-repeat
-			background-size 64px
+    nav
+        li
+            padding 74px 0 10px
+            text-align center
+            font-size 20px
+            color white
+            cursor pointer
+            -webkit-user-select none
+            background url(../img/ui/hexagon_icon_github2.png) #DB6968 center 10px no-repeat
+            background-size 64px
 
-			&:nth-child(2)
-				background-color #22C3AA
-				background-image url(../img/ui/hexagon_icon_lab2.png)
+            &:nth-child(2)
+                background-color #22C3AA
+                background-image url(../img/ui/hexagon_icon_lab2.png)
 
-			&:nth-child(3)
-				background-color #305066
-				background-image url(../img/ui/hexagon_icon_about2.png)
+            &:nth-child(3)
+                background-color #305066
+                background-image url(../img/ui/hexagon_icon_about2.png)
 
-			&:nth-child(4)
-				background-color #0EA8E3
-				background-image url(../img/ui/hexagon_icon_join2.png)
+            &:nth-child(4)
+                background-color #0EA8E3
+                background-image url(../img/ui/hexagon_icon_join2.png)
 
-			&:nth-child(5)
-				background-color #CFE6FF	
+            &:nth-child(5)
+                background-color #CFE6FF    
 
 
 section
-	color white
-	position relative
+    color white
+    position relative
 
-	h2
-		margin-bottom 0
-		text-align center
-		padding: 10px 0
-	
-	.btn
-		display inline-block
-		border-radius 10px
-		border 2px solid white
-		font-size 24px
-		line-height 60px
-		padding 0 15px
-		cursor pointer
+    h2
+        margin-bottom 0
+        text-align center
+        padding 10px 0
+    
+    .btn
+        display inline-block
+        border-radius 10px
+        border 2px solid white
+        font-size 24px
+        line-height 60px
+        padding 0 15px
+        cursor pointer
 
-		i 
-			display inline-block
-			vertical-align middle
-			width 32px
-			height 32px
-			margin: -3px 2px 0 0
+        i 
+            display inline-block
+            vertical-align middle
+            width 32px
+            height 32px
+            margin -3px 2px 0 0
 
-		&.btn-github
-			i
-				background url(../img/ui/icon_github.png) center center no-repeat
+        &.btn-github
+            i
+                background url(../img/ui/icon_github.png) center center no-repeat
 
-		&.btn-start
-			i
-				background url(../img/ui/icon_start.png) center center no-repeat
+        &.btn-start
+            i
+                background url(../img/ui/icon_start.png) center center no-repeat
 
-	
+    
 
-	&#open
-		background #DB6968
-		text-align center
+    &#open
+        background #DB6968
+        text-align center
 
-		$top = 180px
+        $top = 180px
 
-		h3 
-			font-size 0
-			color transparent
-			height 122px
-			background url(../img/content/muplayer_text.png) center $top+16 no-repeat
-			text-align center
-			padding-top $top
-			margin-bottom 140px
-			position relative
-			z-index 10
+        h3 
+            font-size 0
+            height 122px
+            background url(../img/content/muplayer_text.png) center $top+16 no-repeat
+            text-align center
+            padding-top $top
+            margin-bottom 140px
+            position relative
+            z-index 10
 
-		p {
-			font-size 20px
-			-webkit-animation-delay 4s
-			animation-delay 4s
-		}
+            strong
+                color #22c3aa
 
-		.btn-group
-			margin-top 75px
-			-webkit-animation-delay 4s
-			animation-delay 4s
+        p
+            font-size 20px
+            -webkit-animation-delay 4s
+            animation-delay 4s
 
-			.btn
-				margin 0 20px
+        .btn-group
+            margin-top 75px
+            -webkit-animation-delay 4s
+            animation-delay 4s
 
-				&:hover
-					background-color #22c3aa
+            .btn
+                margin 0 20px
+                &:hover, &.active
+                    background-color #22c3aa
 
-		.feature
-			position absolute
-			font-size 0/0
-			color transparent
-			left 50%
+        .feature
+            position absolute
+            font-size 0/0
+            color transparent
+            left 50%
 
-			&.feature-core
-				width 393px
-				height 56px
-				background url(../img/content/feature_core.png)
-				margin-left -510px
-				top $top + 110
-				-webkit-animation-delay 1s
-				animation-delay 1s
+            &.feature-core
+                width 393px
+                height 56px
+                background url(../img/content/feature_core.png)
+                margin-left -510px
+                top $top + 110
+                -webkit-animation-delay 1s
+                animation-delay 1s
 
-			&.feature-api
-				width 460px
-				height 53px
-				background url(../img/content/feature_api.png)
-				margin-left 30px
-				top 130px
-				-webkit-animation-delay 2s
-				animation-delay 2s
+            &.feature-api
+                width 460px
+                height 53px
+                background url(../img/content/feature_api.png)
+                margin-left 30px
+                top 130px
+                -webkit-animation-delay 2s
+                animation-delay 2s
 
-			&.feature-stability
-				width 479px
-				height 97px
-				background url(../img/content/feature_stability.png)
-				margin-left 70px
-				top $top + 110
-				-webkit-animation-delay 3s
-				animation-delay 3s
-
-
-	&#lab
-		background #22C3AA
-
-		h2
-			padding 50px 0 0 70px
-			font-size 40px
-			text-align left
-			font-family l
-
-			strong
-				color #E1451C
-				font-weight bold
-				margin-right 8px
-
-		.showcase
-			padding 50px 20px 50px 50px
-
-			li 
-				display inline-block
-				margin 15px
-				text-align center
-				position relative
-
-				&:hover
-					.info
-						-webkit-transform: scale(1);
-						transform: scale(1);
-						opacity: 1;
-					p 
-						opacity: 1;
-
-					.thumb
-						box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
-
-			.info
-				position: absolute;
-				top 0
-				left 0
-				width 150px
-				height 150px
-				border-radius 50%
-				background: rgba(63,147,147, 0.8);
-				opacity: 0;
-				-webkit-transition: all 0.4s ease-in-out;
-				transition: all 0.4s ease-in-out;
-				-webkit-transform: scale(0);
-				transform: scale(0);
-				-webkit-backface-visibility: hidden;
-
-			p 
-				// opacity: 0;
-				// -webkit-transition: all 1s ease-in-out 0.4s;
-				// transition: all 1s ease-in-out 0.4s;
-				padding-top 55px
-
-			.thumb
-				width 150px
-				height 150px
-				border-radius 50%
-				overflow hidden
-				position relative
-				box-shadow: inset 0 0 0 12px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.1);
-				-webkit-transition: all 0.4s ease-in-out;
-				transition: all 0.4s ease-in-out;
-				background-size cover
-
-			.author
-				padding 10px
-				display none
-				img
-					width 30px
-					height 30px
-					border-radius 50%
-					vertical-align middle
-
-			.title
-				margin-top 10px
-					
-
-	&#about
-		background #305066
-
-		h2
-			padding-top 100px
-			font-size 30px
-
-			strong
-				color #db6968
-				font-weight normal
-				font-size 40px
-				margin-right 8px
-
-		$w = 150px
-		$h = 150px
-		$gap = -5
-		.members
-			position relative
-			margin 50px auto 0
-			width ($w + $gap) * 6 - $gap
-			height $h * 3 - $gap * 3 * 2
-
-			li
-				position absolute
-				width $w
-				height $h
-				top 0
-
-				$poly_a = (2 + sqrt(3)) / 4 * 100%
-				$poly_b = (2 - sqrt(3)) / 4 * 100%
-				.clip 
-					-webkit-clip-path: polygon(50% 0, $poly_a 25%, $poly_a 75%, 50% 100%, $poly_b 75%,  $poly_b 25%)
-				
-				img
-					width 100%
-					height 100%
-
-				$offset = ($gap + $w) / 2
-				for $num in (1..5)
-					&:nth-child({$num})
-						left ($w + $gap) * ($num - 1) + $offset
-				for $num in (6..11)
-					&:nth-child({$num})
-						top $h + $gap * 4
-						left ($w + $gap) * ($num - 6)
-				for $num in (12..16)
-					&:nth-child({$num})
-						top ($h + $gap * 4) * 2
-						left ($w + $gap) * ($num - 12) + $offset
-				for $num in (1..16)
-					&:nth-child({$num})
-						-webkit-animation-delay: random(0.5, 2)s
+            &.feature-stability
+                width 479px
+                height 97px
+                background url(../img/content/feature_stability.png)
+                margin-left 70px
+                top $top + 110
+                -webkit-animation-delay 3s
+                animation-delay 3s
 
 
-	&#join
-		background #0EA8E3
+    &#lab
+        background #22C3AA
 
-		code
-			background rgba(101, 137, 197, 0.74)
-			padding 0 5px
-			border-radius 10px
-			font-family 'consolas'
-			margin 0 10px
+        h2
+            padding 50px 0 0 70px
+            font-size 40px
+            text-align left
+            font-family l
 
-		h2
-			font-size 40px
-			padding 50px 0 0 50px
-			text-align left
+            strong
+                color #E1451C
+                font-weight bold
+                margin-right 8px
 
-			strong
-				font-weight normal
-				color #DB6968
+        .showcase
+            padding 50px 20px 50px 50px
+
+            li 
+                display inline-block
+                margin 15px
+                text-align center
+                position relative
+                width 150px
+                height 150px
+
+                &:hover
+                    .info
+                        -webkit-transform scale(1)
+                        transform scale(1)
+                        opacity 1
+                    p 
+                        opacity 1
+
+                    .thumb
+                        box-shadow inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1)
+
+            .info
+                position absolute
+                top 0
+                left 0
+                width 100%
+                height 100%
+                border-radius 50%
+                background rgba(63,147,147, 0.8)
+                opacity 0
+                -webkit-transition all 0.4s ease-in-out
+                transition all 0.4s ease-in-out
+                -webkit-transform scale(0)
+                transform scale(0)
+                -webkit-backface-visibility hidden
+
+            p 
+                padding-top 55px
+
+            .thumb
+                width 100%
+                height 100%
+                border-radius 50%
+                overflow hidden
+                position relative
+                box-shadow inset 0 0 0 12px rgba(255,255,255,0.5), 0 1px 2px rgba(0,0,0,0.1) 
+                -webkit-transition all 0.4s ease-in-out 
+                transition all 0.4s ease-in-out 
+                background-size cover
+
+            .author
+                padding 10px
+                display none
+                img
+                    width 30px
+                    height 30px
+                    border-radius 50%
+                    vertical-align middle
+
+            .title
+                margin-top 10px
+                    
+
+    &#about
+        background #305066
+
+        h2
+            padding-top 100px
+            font-size 30px
+
+            strong
+                color #db6968
+                font-weight normal
+                font-size 1.5em
+                margin-right 8px
+
+        $w = 150px
+        $h = 150px
+        $gap = -5
+        .members
+            position relative
+            margin 50px auto 0
+            width ($w + $gap) * 6 - $gap
+            height $h * 3 - $gap * 3 * 2
+
+            li
+                position absolute
+                width $w
+                height $h
+                top 0
+
+                $poly_a = (2 + sqrt(3)) / 4 * 100%
+                $poly_b = (2 - sqrt(3)) / 4 * 100%
+                .clip 
+                    -webkit-clip-path polygon(50% 0, $poly_a 25%, $poly_a 75%, 50% 100%, $poly_b 75%,  $poly_b 25%)
+                
+                img
+                    width 100%
+                    height 100%
+
+                $offset = ($gap + $w) / 2
+                for $num in (1..5)
+                    &:nth-child({$num})
+                        left ($w + $gap) * ($num - 1) + $offset
+                for $num in (6..11)
+                    &:nth-child({$num})
+                        top $h + $gap * 4
+                        left ($w + $gap) * ($num - 6)
+                for $num in (12..16)
+                    &:nth-child({$num})
+                        top ($h + $gap * 4) * 2
+                        left ($w + $gap) * ($num - 12) + $offset
+                for $num in (1..16)
+                    &:nth-child({$num})
+                        -webkit-animation-delay random(0.5, 2)s
+
+
+    &#join
+        background #0EA8E3
+
+        code
+            background rgba(101, 137, 197, 0.74)
+            padding 0 5px
+            border-radius 10px
+            font-family 'consolas'
+            margin 0 10px
+
+        h2
+            font-size 40px
+            padding 50px 0 0 50px
+            text-align left
+
+            strong
+                font-weight normal
+                color #DB6968
 
 footer
-	position fixed
-	width 200px
-	left 0
-	bottom 0
-	z-index 20
-	text-align center
-	color #515151
+    position fixed
+    width 200px
+    left 0
+    bottom 0
+    z-index 20
+    text-align center
+    color #515151
 
-	p 
-		padding-bottom 10px
-		font-size 12px
-	
+    p 
+        padding-bottom 10px
+        font-size 12px
+    
 
-	.social
-		li
-			display inline-block
-			width 35px
-			height 35px
-			margin 0 5px
-			background url(../img/ui/iconfont-weibo.png) center center no-repeat
-			background-size 40px
+    .social
+        li
+            display inline-block
+            width 35px
+            height 35px
+            margin 0 5px
+            background url(../img/ui/iconfont-weibo.png) center center no-repeat
+            background-size 40px
 
-			&.github
-				background-image url(../img/ui/iconfont-github.png)
-				background-size 30px
+            a
+                display block
+                height 100%
 
-			&:hover 
-				opacity .6
+            &.github
+                background-image url(../img/ui/iconfont-github.png)
+                background-size 30px
 
-
-/* animiate.css */
-$fadeInOffset = 80px
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.animated.infinite {
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(- $fadeInOffset);
-    transform: translateX(- $fadeInOffset);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(- $fadeInOffset);
-    -ms-transform: translateX(- $fadeInOffset);
-    transform: translateX(- $fadeInOffset);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-.fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
-}
-
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX($fadeInOffset);
-    -ms-transform: translateX($fadeInOffset);
-    transform: translateX($fadeInOffset);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-  }
-}
-
-.fadeInRight {
-  -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
-}
-
-@-webkit-keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(.3);
-    transform: scale(.3);
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(.3);
-    -ms-transform: scale(.3);
-    transform: scale(.3);
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
+            &:hover 
+                opacity .6
 
 
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width  320px) and (max-device-width  640px) 
+    
+    $sidebar_w = 180px
 
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
+    body
+        width 100%
+        padding-left $sidebar_w
+        -webkit-transform translateX(-($sidebar_w))
+        transform translateX(-($sidebar_w))
+        transition all 500ms ease-in-out
+
+        &.push-toright
+            -webkit-transform translateX(0)
+            transform translateX(0)
+            overflow hidden
+
+            .pt-perspective:before
+                content: ''
+                position absolute
+                top 0
+                left 0
+                width 100%
+                height 100%
+                background rgba(0, 0, 0, 0.3)
+                z-index 999
+
+    .nav-toggle
+        display block
+                
+    header
+        width $sidebar_w
+    
+        h1
+            padding-top 80px
+            background-position-y -5px
+            background-size 100px
+            font-size 35px
+            margin 0
+
+        nav
+            li
+                padding 0 0 0 52px
+                background-position 12px center
+                background-size 35px
+                height 70px
+                line-height 70px
+                text-align left
+
+    section
+        .btn
+            border-radius 7px
+            font-size 16px
+            line-height 35px
+            padding 0 4px
+
+            &.btn-github, &.btn-start
+                i 
+                    background-size 25px
+                    margin-right 0
+
+        &#open
+            $top = 100px
+            h3
+                font-size 60px
+                background none
+                height 92px
+                padding-top $top
+                margin-bottom 120px
+
+            .feature
+                &.feature-api
+                    width 230px
+                    height 26px
+                    background-size 230px 26px
+                    margin-left -80px
+                    top $top - 15
+                    -webkit-animation-delay: 1s;
+                    animation-delay: 1s;
+
+                &.feature-core
+                    width 186px
+                    height 28px
+                    background-size 186px 28px
+                    margin-left -150px
+                    top $top + 80
+                    -webkit-animation-delay: 2s;
+                    animation-delay: 2s;
+
+                &.feature-stability
+                    width 240px
+                    height 49px
+                    background-size 240px 49px
+                    margin-left -109px
+                    top $top + 110
+
+            p
+                font-size 14px
+                span
+                    display block
+
+            .btn-group
+                margin-top 35px
+                .btn
+                    margin 0 8px
+
+        &#lab
+            h2
+                font-size 30px
+                padding 50px 0 0 20px 
+                span
+                    display block
+                    text-align right
+                    padding-right 20px
+
+            .showcase
+                max-height 340px
+                overflow-y scroll
+                padding 10px
+                li
+                    margin 10px
+                    width 120px
+
+                .thumb
+                    height 120px
+                    box-shadow none
+
+                .info
+                    position static
+                    border-radius 0
+                    opacity 1
+                    -webkit-transform scale(1)
+                    transform scale(1)
+                    height auto
+                    background none
+
+                .title
+                    margin-top 5px
+                    padding-top 0
+                    font-size 14px
 
 
-.flipInX {
-  -webkit-backface-visibility: visible !important;
-  -ms-backface-visibility: visible !important;
-  backface-visibility: visible !important;
-  -webkit-animation-name: flipInX;
-  animation-name: flipInX;
-}
+        &#about
+            h2
+                font-size 20px
+                padding-top 50px
 
-@-webkit-keyframes flipInY {
-  0% {
-    -webkit-transform: perspective(400px) rotateY(90deg);
-    transform: perspective(400px) rotateY(90deg);
-    opacity: 0;
-  }
+            $w = 65px
+            $h = 65px
+            $gap = -2
+            .members
+                margin-top 10px
+                width ($w + $gap) * 5 - $gap
+                height $h * 3 - $gap * 3 * 2
 
-  40% {
-    -webkit-transform: perspective(400px) rotateY(-10deg);
-    transform: perspective(400px) rotateY(-10deg);
-  }
+                li
+                    position absolute
+                    width $w
+                    height $h
+                    top 0
 
-  70% {
-    -webkit-transform: perspective(400px) rotateY(10deg);
-    transform: perspective(400px) rotateY(10deg);
-  }
+                    $poly_a = (2 + sqrt(3)) / 4 * 100%
+                    $poly_b = (2 - sqrt(3)) / 4 * 100%
+                    .clip 
+                        -webkit-clip-path polygon(50% 0, $poly_a 25%, $poly_a 75%, 50% 100%, $poly_b 75%,  $poly_b 25%)
+                    
+                    img
+                        width 100%
+                        height 100%
 
-  100% {
-    -webkit-transform: perspective(400px) rotateY(0deg);
-    transform: perspective(400px) rotateY(0deg);
-    opacity: 1;
-  }
-}
+                    $offset = ($gap + $w) / 2
+                    for $num in (1..4)
+                        &:nth-child({$num})
+                            left ($w + $gap) * ($num - 1) + $offset
+                    for $num in (5..10)
+                        &:nth-child({$num})
+                            top $h + $gap * 4
+                            left ($w + $gap) * ($num - 5)
+                    for $num in (10..13)
+                        &:nth-child({$num})
+                            top ($h + $gap * 4) * 2
+                            left ($w + $gap) * ($num - 10) + $offset
+                    for $num in (1..16)
+                        &:nth-child({$num})
+                            -webkit-animation-delay random(0.5, 2)s
 
-@keyframes flipInY {
-  0% {
-    -webkit-transform: perspective(400px) rotateY(90deg);
-    -ms-transform: perspective(400px) rotateY(90deg);
-    transform: perspective(400px) rotateY(90deg);
-    opacity: 0;
-  }
+        &#join
+            h2
+                font-size 24px
+                padding 50px 0 0 10px
+                       
+    footer
+        width $sidebar_w
 
-  40% {
-    -webkit-transform: perspective(400px) rotateY(-10deg);
-    -ms-transform: perspective(400px) rotateY(-10deg);
-    transform: perspective(400px) rotateY(-10deg);
-  }
+    
 
-  70% {
-    -webkit-transform: perspective(400px) rotateY(10deg);
-    -ms-transform: perspective(400px) rotateY(10deg);
-    transform: perspective(400px) rotateY(10deg);
-  }
 
-  100% {
-    -webkit-transform: perspective(400px) rotateY(0deg);
-    -ms-transform: perspective(400px) rotateY(0deg);
-    transform: perspective(400px) rotateY(0deg);
-    opacity: 1;
-  }
-}
 
-.flipInY {
-  -webkit-backface-visibility: visible !important;
-  -ms-backface-visibility: visible !important;
-  backface-visibility: visible !important;
-  -webkit-animation-name: flipInY;
-  animation-name: flipInY;
-}
+
+
 
 
 

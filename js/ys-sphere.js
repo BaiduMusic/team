@@ -76,9 +76,19 @@
             window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function(callback) {
                 return window.setTimeout(callback, 1e3 / 60)
             };
-            this.$canvas = jQuery('<canvas style="position: fixed; z-index: -10000; top: 0; left:0;"></canvas>');
-            jQuery("body").prepend(this.$canvas);
-            this.canvas = this.$canvas[0];
+            if(this.canvas) {
+                this.$canvas = jQuery(this.canvas).css({
+                    position: 'absolute',
+                    'z-index': 10,
+                    top: 0,
+                    'pointer-events': 'none',
+                    left: 0
+                })
+            } else {
+                this.$canvas = jQuery('<canvas style="position: fixed; z-index: -10000; top: 0; left:0;"></canvas>');
+                jQuery("body").prepend(this.$canvas);
+                this.canvas = this.$canvas[0];
+            }
             this.context = this.canvas.getContext("2d")
         };
         Sphere.prototype.init_size = function() {
@@ -354,7 +364,7 @@
         // ys.words = words.map(function(el) {
         //     return el.replace("\n", "<br>")
         // });
-        sphere = new Sphere(document.querySelector('#logo-canvas'));
+        sphere = new Sphere(document.querySelector('#sphere-bg'));
         sphere.animate();
         return mfe.sphere = sphere
 

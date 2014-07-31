@@ -1,10 +1,25 @@
 $(function() {
-	var $body = $('body')
+	var $body = $('body'),
+		$navToggle = $('.nav-toggle');
 
-	$body.on('click', 'nav li:not(.on)', function(e) {
+	$body.on('click', 'nav li', function(e) {
+		if ($body.hasClass('push-toright')) {
+			$body.removeClass('push-toright');
+			$navToggle.removeClass('active');
+		}
+
+		if ($(this).hasClass('on'))
+			return false;
+
 		$(this).addClass('on').siblings().removeClass('on');
 		PageTransitions.nextPage($(this).index());
 	});
+
+	$body.on('click', '.nav-toggle', function(e) {
+		$(this).toggleClass('active');
+		$body.toggleClass('push-toright');
+	});
+
 
 	var PageTransitions = (function() {
 
@@ -16,7 +31,7 @@ $(function() {
 			endCurrPage = false,
 			endNextPage = false,
 			// animation end event name
-			animEndEventName = 'webkitAnimationEnd',
+			animEndEventName = 'webkitAnimationEnd mozAnimationEnd',
 			// support css animations
 			support = true;
 
