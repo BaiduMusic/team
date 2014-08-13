@@ -109,22 +109,32 @@ header
             -webkit-user-select none
             background url(../img/ui/hexagon_icon_github2.png) #DB6968 center 10px no-repeat
             background-size 64px
+            &.on, &:hover    
+                background-image url(../img/ui/hexagon_icon_github.png)
 
             &:nth-child(2)
                 background-color #22C3AA
                 background-image url(../img/ui/hexagon_icon_lab2.png)
+                &.on, &:hover    
+                    background-image url(../img/ui/hexagon_icon_lab.png)
 
             &:nth-child(3)
                 background-color #305066
                 background-image url(../img/ui/hexagon_icon_about2.png)
+                &.on, &:hover    
+                    background-image url(../img/ui/hexagon_icon_about.png)
 
             &:nth-child(4)
                 background-color #0EA8E3
                 background-image url(../img/ui/hexagon_icon_join2.png)
+                &.on, &:hover    
+                    background-image url(../img/ui/hexagon_icon_join.png)
 
             &:nth-child(5)
-                background-color #CFE6FF    
-
+                background-color #CFE6FF 
+                background-image url(../img/ui/hexagon_icon_post2.png)
+                &.on, &:hover    
+                    background-image url(../img/ui/hexagon_icon_post.png)
 
 section
     color white
@@ -305,7 +315,8 @@ section
 
             .title
                 margin-top 10px
-                    
+         
+    
 
     &#about
         background #305066
@@ -323,7 +334,7 @@ section
         $w = 150px
         $h = 150px
         $gap = -5
-        .members
+        .members 
             position relative
             margin 50px auto 0
             width ($w + $gap) * 6 - $gap
@@ -375,10 +386,42 @@ section
             font-size 40px
             padding 50px 0 0 50px
             text-align left
-
             strong
                 font-weight normal
                 color #DB6968
+
+        .recruitment
+            margin-top 50px
+            padding-left 50px
+
+        p
+            line-height 2em
+       
+    &#weekly  
+        background #CFE6FF
+        color #1E4889
+
+        h2 
+            padding 30px 50px 
+            text-align left
+            font-size 30px
+
+        a 
+            color #1E4889
+
+        code
+            background rgba(101, 137, 197, 0.74)
+            padding 0 5px
+            border-radius 10px
+            font-family 'consolas'
+            margin 0 10px
+            color white
+
+        .posts
+            padding-left 50px
+            li
+                margin-bottom 20px
+                list-style disc
 
 footer
     position fixed
@@ -605,6 +648,20 @@ footer
             h2
                 font-size 24px
                 padding 50px 0 0 10px
+
+            .recruitment
+                margin-top 20px
+                padding 0 10px
+                font-size 14px
+
+        &#weekly
+            h2
+                font-size 24px
+                padding 50px 30px 20px
+
+            .posts
+                padding-left 30px
+                font-size 14px
                        
     footer
         width $sidebar_w

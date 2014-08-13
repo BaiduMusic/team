@@ -2,11 +2,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Music FE - 百度音乐前端团队</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="css/font.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/page-transition.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
+
 <header>
     <h1 class="logo"><span>Music FE</span></h1>
     <nav>
@@ -15,13 +21,18 @@
             <li>Our Lab</li>
             <li>About Us</li>
             <li>Join Us</li>
+            <li>FE Weekly</li>
         </ul>
     </nav>
 </header>
 
 <div id="pt-main" class="pt-perspective">
+    <div class="nav-toggle">
+        <span></span>
+    </div>
+    <canvas id="sphere-bg"></canvas>
     <section id="open" class="pt-page">
-        <h3 class="animated" data-animation="zoomIn">Mu Player</h3>
+        <h3 class="animated font-l" data-animation="zoomIn">Mu Player</h3>
         <div class="feature feature-core animated" data-animation="fadeInRight">
             { 
             <span class="html5-core">html5</span>
@@ -36,12 +47,15 @@
         <div class="feature feature-stability animated" data-animation="fadeInLeft">
             { 应用于多个产品 稳定可靠 }
         </div>
-        <p class="animated" data-animation="fadeIn">『百度音乐播放内核』- 跨平台、轻量级的Web端音频播放解决方案</p>
+        <p class="animated" data-animation="fadeIn">
+            <span>『百度音乐播放内核』</span> 
+            <span>- 跨平台、轻量级的Web端音频播放解决方案</span>
+        </p>
         <div class="btn-group animated" data-animation="fadeIn">
-            <span class="btn btn-github">
+            <a class="btn btn-github" href="https://github.com/Baidu-Music-FE/muplayer/" target="_blank">
                 <i></i>
                 View On Github
-            </span>
+            </a>
             <span class="btn btn-start">
                 <i></i>
                 Quick Start
@@ -50,7 +64,7 @@
     </section>
     
     <section id="lab" class="pt-page">
-        <h2 class="animated" data-animation="zoomIn">Write the code and <strong>Rock</strong> the world</h2>
+        <h2 class="animated" data-animation="zoomIn">Write the code and <span><strong>Rock</strong> the world</span></h2>
         <ul class="showcase">
             <li>
                 <a target="_blank" href="http://labs.music.baidu.com/demo/interactions/visualization/">
@@ -103,6 +117,8 @@
             </li>
         </ul>
     </section>
+
+    
     
     <section id="about" class="pt-page">
         <h2 class="animated" data-animation="zoomIn"><strong>我们</strong>是百度音乐前端团队</h2>
@@ -177,13 +193,38 @@
     
     <section id="join" class="pt-page">
         <h2 class="animated" data-animation="zoomIn">与 <code>&lt;Music-FE&gt;</code> 一起<strong>成长</strong></h2>
+        <div class="recruitment">
+            <p>如果你是技术Geek，这里有各种开源项目等待你的加入</p>
+
+            <p>在业务需求的开发基础上，我们已经对外开源了百度音乐播放内核</p>
+
+            <p>还有多个进行中的内部项目，期待你的加入</p>
+
+            <p>不只是前端，你可以学习和使用到各种技术</p>
+
+            <p>我们有熟悉服务端的同学，开发维护的内部工具平台，为前后端调试提供便利</p>
+
+            <p>我们有热爱Node.js的同学，并已经使用到线上产品中</p>
+
+            <p>我们的播放内核还用到flash和音频处理</p>
+
+            <p>我们在移动端有丰富的积累和多个移动端项目。比如正在进行native和web的各种混合尝试，提升端的开发效率 ......</p>
+
+            <p>如果你热爱音乐，你将亲自体会到自己的力量对行业的贡献</p>
+
+            <p>这里有多个形态的音乐产品，和一群热爱音乐的人，收获到技术带来的成就感!</p>    
+        </div>
+    </section>
+
+    <section id="weekly" class="pt-page">
+        <h2 class="animated" data-animation="zoomIn">每周<code>&lt;FE&gt;</code>技术见闻</h2>
     </section>
 </div>
 
 <footer>
     <ul class="social">
-        <li class="weibo"></li>
-        <li class="github"></li>
+        <li class="weibo"><a href="http://weibo.com/musicfe" target="_blank"></a></li>
+        <li class="github"><a href="https://github.com/Baidu-Music-FE" target="_blank"></a></li>
     </ul>
     <p class="copyright">&copy;2014 Music FE</p>
 </footer>
@@ -194,3 +235,6 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
+
+

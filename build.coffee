@@ -2,6 +2,7 @@ process.env.NODE_ENV = 'production'
 
 data = require './data'
 nobone = require 'nobone'
+_ = require 'lodash'
 
 nb = nobone {
     proxy: {}
@@ -12,6 +13,13 @@ nb = nobone {
 log = nb.kit.log
 render = nb.renderer.render
 write = nb.kit.outputFile
+
+# # complie md
+# weekly = []
+# nb.kit.readdir('weekly')
+#     .done (rs) ->
+#         weekly =  _.without(rs, 'img').reverse()
+#         write 'weekly.json', JSON.stringify(weekly)
 
 # complie html
 render('index.ejs')
