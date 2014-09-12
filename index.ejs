@@ -20,7 +20,7 @@
             <li class="on">Open Source</li>
             <li>Our Lab</li>
             <li>About Us</li>
-            <li>Join Us</li>
+            <!-- <li>Join Us</li> -->
             <li>FE Weekly</li>
         </ul>
     </nav>
@@ -126,12 +126,15 @@
             <% _.each(members, function(m) { %>
                 <li class="animated" data-animation="flipInY">
                     <img class="clip" src="img/avatar/<%- m.avatar || 'default.png' %>" alt="" />
+                    <div class="info">
+                        <p class="nickname"><%- m.nickname %></p>   
+                    </div>
                 </li>
             <% }) %>
         </ul>
     </section>
     
-    <section id="join" class="pt-page">
+<!--     <section id="join" class="pt-page">
         <h2 class="animated" data-animation="zoomIn">与 <code>&lt;Music-FE&gt;</code> 一起<strong>成长</strong></h2>
         <div class="recruitment">
             <p>如果你是技术Geek，这里有各种开源项目等待你的加入</p>
@@ -154,7 +157,7 @@
 
             <p>这里有多个形态的音乐产品，和一群热爱音乐的人，收获到技术带来的成就感!</p>    
         </div>
-    </section>
+    </section> -->
 
     <section id="weekly" class="pt-page">
         <h2 class="animated" data-animation="zoomIn">每周<code>&lt;FE&gt;</code>技术见闻</h2>

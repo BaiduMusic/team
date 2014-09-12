@@ -354,6 +354,15 @@ section#about .members li img {
   width: 100%;
   height: 100%;
 }
+section#about .members li .info {
+  position: absolute;
+  text-align: center;
+  top: 92px;
+  left: 10px;
+  padding: 0 10px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+}
 section#about .members li:nth-child(1) {
   left: 72.5px;
 }
@@ -414,52 +423,52 @@ section#about .members li:nth-child(16) {
   left: 652.5px;
 }
 section#about .members li:nth-child(1) {
-  -webkit-animation-delay: 2.546296063344925s;
+  -webkit-animation-delay: 1.718347436515615s;
 }
 section#about .members li:nth-child(2) {
-  -webkit-animation-delay: 1.727835986064747s;
+  -webkit-animation-delay: 0.585774274193682s;
 }
 section#about .members li:nth-child(3) {
-  -webkit-animation-delay: 1.589964238926767s;
+  -webkit-animation-delay: 2.132801851956175s;
 }
 section#about .members li:nth-child(4) {
-  -webkit-animation-delay: 0.908075412851757s;
+  -webkit-animation-delay: 2.903382075135595s;
 }
 section#about .members li:nth-child(5) {
-  -webkit-animation-delay: 1.728068166528828s;
+  -webkit-animation-delay: 2.208371861604973s;
 }
 section#about .members li:nth-child(6) {
-  -webkit-animation-delay: 1.186911192606203s;
+  -webkit-animation-delay: 2.97030979662668s;
 }
 section#about .members li:nth-child(7) {
-  -webkit-animation-delay: 2.927523029618897s;
+  -webkit-animation-delay: 2.546300754882395s;
 }
 section#about .members li:nth-child(8) {
-  -webkit-animation-delay: 1.729065054212698s;
+  -webkit-animation-delay: 2.789543997030705s;
 }
 section#about .members li:nth-child(9) {
-  -webkit-animation-delay: 1.32791926106438s;
+  -webkit-animation-delay: 1.252116228686645s;
 }
 section#about .members li:nth-child(10) {
-  -webkit-animation-delay: 2.631613030214795s;
+  -webkit-animation-delay: 0.892555786529555s;
 }
 section#about .members li:nth-child(11) {
-  -webkit-animation-delay: 2.759911992005073s;
+  -webkit-animation-delay: 2.93057832994964s;
 }
 section#about .members li:nth-child(12) {
-  -webkit-animation-delay: 1.812140008667485s;
+  -webkit-animation-delay: 1.54035462019965s;
 }
 section#about .members li:nth-child(13) {
-  -webkit-animation-delay: 1.351988914073445s;
+  -webkit-animation-delay: 2.217489031725563s;
 }
 section#about .members li:nth-child(14) {
-  -webkit-animation-delay: 0.696481419843622s;
+  -webkit-animation-delay: 0.642011439893395s;
 }
 section#about .members li:nth-child(15) {
-  -webkit-animation-delay: 1.177789715118705s;
+  -webkit-animation-delay: 2.99518177646678s;
 }
 section#about .members li:nth-child(16) {
-  -webkit-animation-delay: 1.739744367194362s;
+  -webkit-animation-delay: 1.243928508018142s;
 }
 section#join {
   background: #0ea8e3;
@@ -704,6 +713,9 @@ footer .social li:hover {
     width: 100%;
     height: 100%;
   }
+  section#about .members li .info {
+    display: none;
+  }
   section#about .members li:nth-child(1) {
     left: 31.5px;
   }
@@ -757,52 +769,52 @@ footer .social li:hover {
     left: 220.5px;
   }
   section#about .members li:nth-child(1) {
-    -webkit-animation-delay: 2.759445494273677s;
+    -webkit-animation-delay: 2.536575278034433s;
   }
   section#about .members li:nth-child(2) {
-    -webkit-animation-delay: 1.047273241099902s;
+    -webkit-animation-delay: 2.989643800654448s;
   }
   section#about .members li:nth-child(3) {
-    -webkit-animation-delay: 1.55638429231476s;
+    -webkit-animation-delay: 1.804381843656303s;
   }
   section#about .members li:nth-child(4) {
-    -webkit-animation-delay: 0.737513264873997s;
+    -webkit-animation-delay: 1.132919720956125s;
   }
   section#about .members li:nth-child(5) {
-    -webkit-animation-delay: 1.619466733653097s;
+    -webkit-animation-delay: 2.715404082089663s;
   }
   section#about .members li:nth-child(6) {
-    -webkit-animation-delay: 1.959131966112182s;
+    -webkit-animation-delay: 1.645531284855678s;
   }
   section#about .members li:nth-child(7) {
-    -webkit-animation-delay: 2.501941879861988s;
+    -webkit-animation-delay: 2.382443146896547s;
   }
   section#about .members li:nth-child(8) {
-    -webkit-animation-delay: 0.60734065377619s;
+    -webkit-animation-delay: 2.852014462230728s;
   }
   section#about .members li:nth-child(9) {
-    -webkit-animation-delay: 1.015648419968785s;
+    -webkit-animation-delay: 1.944555125781335s;
   }
   section#about .members li:nth-child(10) {
-    -webkit-animation-delay: 1.639494816889055s;
+    -webkit-animation-delay: 2.265909056412055s;
   }
   section#about .members li:nth-child(11) {
-    -webkit-animation-delay: 1.947362345643342s;
+    -webkit-animation-delay: 2.474819831666538s;
   }
   section#about .members li:nth-child(12) {
-    -webkit-animation-delay: 0.661575482343322s;
+    -webkit-animation-delay: 2.58346973580774s;
   }
   section#about .members li:nth-child(13) {
-    -webkit-animation-delay: 2.77694787841756s;
+    -webkit-animation-delay: 1.41318826423958s;
   }
   section#about .members li:nth-child(14) {
-    -webkit-animation-delay: 2.84854206442833s;
+    -webkit-animation-delay: 2.426818325882778s;
   }
   section#about .members li:nth-child(15) {
-    -webkit-animation-delay: 1.122111807460898s;
+    -webkit-animation-delay: 2.944760617800057s;
   }
   section#about .members li:nth-child(16) {
-    -webkit-animation-delay: 2.409170274157078s;
+    -webkit-animation-delay: 2.380176070844755s;
   }
   section#join h2 {
     font-size: 24px;

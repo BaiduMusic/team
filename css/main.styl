@@ -355,6 +355,16 @@ section
                     width 100%
                     height 100%
 
+                .info
+                    position absolute
+                    text-align center
+                    top 92px
+                    left 10px
+                    padding 0 10px
+                    background rgba(0, 0, 0, 0.6)
+                    color white
+
+
                 $offset = ($gap + $w) / 2
                 for $num in (1..5)
                     &:nth-child({$num})
@@ -627,6 +637,9 @@ footer
                     img
                         width 100%
                         height 100%
+
+                    .info 
+                        display none
 
                     $offset = ($gap + $w) / 2
                     for $num in (1..4)
