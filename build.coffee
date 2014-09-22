@@ -22,7 +22,7 @@ write = nb.kit.outputFile
 #         write 'weekly.json', JSON.stringify(weekly)
 
 # complie html
-render('index.ejs')
+render('index.ejs', '.html')
     .done (tpl_func) ->
         html = tpl_func( { members: data.members } )
         write 'index.html', html
@@ -35,7 +35,7 @@ nb.kit.readdir 'css'
         files.forEach (file) ->
             if file.indexOf('.styl') > -1
                 file = 'css/' + file
-                render file
+                render file, '.css'
                     .done (rs) ->
                         write file.replace('.styl', '.css'), rs
                             .done () ->
