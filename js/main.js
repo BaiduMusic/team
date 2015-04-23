@@ -13,7 +13,7 @@ $(function() {
 			endCurrPage = false,
 			endNextPage = false,
 			// animation end event name
-			animEndEventName = 'webkitAnimationEnd mozAnimationEnd',
+			animEndEventName = 'webkitAnimationEnd mozAnimationEnd animationend',
 			// support css animations
 			support = true;
 
